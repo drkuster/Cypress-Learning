@@ -1,12 +1,12 @@
-describe('Attempting to order brocolli from Rahul Shetty site', () => {
+describe('Attempting to order broccoli from Rahul Shetty site', () => {
     it('Navigating to the page', () => {
         cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
     })
-    it('Searching for brocolli with letter b', () => {
+    it('Searching for broccoli with letter b', () => {
         cy.get('input.search-keyword').type('b')
         cy.wait(2000)
     })
-    it('Searching for brocolli from results, adding to cart', () => {
+    it('Searching for broccoli from results, adding to cart', () => {
         cy.get('.products').find('.product').each(($el) => {
             const productName = $el.find('h4.product-name').text()
             if(productName.includes('Brocolli')) {
