@@ -9,6 +9,7 @@
   "author": "Dylan Kuster",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.1.0"
+    "cypress": "^6.1.0",
+    "cypress-iframe": "^1.0.1"
   }
 }
