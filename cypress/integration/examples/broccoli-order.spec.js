@@ -17,7 +17,7 @@ describe('Attempting to order broccoli from Rahul Shetty site', () => {
     it('Checking out', () => {
         cy.get('a.cart-icon').click()
         cy.contains('PROCEED TO CHECKOUT').click()
-        cy.wait(1000)
+        cy.wait(5000)
         cy.contains('Place Order').click()
         cy.get('select').select('United States')
         cy.get('.chkAgree').click()

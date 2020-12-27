@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import HomePage from '../../pages/home-page'
+import HomePage from '../../support/pages/home-page'
 
 describe('Handling test framework', () => {
     before(() => {

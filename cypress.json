@@ -1,1 +1,6 @@
-{}
+{
+    "env": {
+        "baseURL": "https://rahulshettyacademy.com",
+        "angularPracticeSite": "/angularpractice/"
+    }
+}

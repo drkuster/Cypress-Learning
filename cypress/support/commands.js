@@ -13,11 +13,11 @@
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
 
-import ProductPage from "../pages/product-page"
+import ProductPage from "./pages/product-page"
 
 Cypress.Commands.add("goToShop", () => {
     const productPage = new ProductPage()
-    cy.visit('https://rahulshettyacademy.com/angularpractice/')
+    cy.visit(Cypress.env("baseURL") + Cypress.env("angularPracticeSite"))
     productPage.getShop().click()
 })
 

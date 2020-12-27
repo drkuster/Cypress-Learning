@@ -1,4 +1,4 @@
-import ProductPage from "../../pages/product-page"
+import ProductPage from "../../support/pages/product-page"
 
 describe('Utilizing a custom command', () => {
     before(() => {
@@ -14,7 +14,19 @@ describe('Utilizing a custom command', () => {
             cy.addProductToCart(product)
         });
         globalThis.productPage.getCart().click()
+    })
+    it('Verify cart is correct', () => {
         cy.verifyCart(globalThis.products.products)
+        var totalPrice = 0
+        globalThis.productPage.getProductPrices().each(($price) => {
+            const trimmedPrice = parseInt($price.text().split(' ')[1].trim())
+            cy.log(trimmedPrice)
+            totalPrice = totalPrice + trimmedPrice
+        })
+        globalThis.productPage.getTotalPrice().then(($finalTotal) => {
+            const bottomTotal = parseInt($finalTotal.text().split(' ')[1].trim())
+            expect(bottomTotal).to.eql(totalPrice)
+        })
     })
     it('Complete order', () => {
         globalThis.productPage.getCheckout().click()
@@ -22,6 +34,7 @@ describe('Utilizing a custom command', () => {
         globalThis.productPage.getCountryTF().type(globalThis.products.country)
         globalThis.productPage.getSuggestedOptions().each(($countrySuggestion, index) => {
             const countryName = $countrySuggestion.text()
+            cy.log($countrySuggestion)
             if(countryName.includes(globalThis.products.country)) {
                 globalThis.productPage.getSuggestedOptionLinks().eq(index).click()
             }

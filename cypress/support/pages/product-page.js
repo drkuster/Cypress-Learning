@@ -46,6 +46,14 @@ class ProductPage {
     getOrderResponse() {
         return cy.get('.alert.alert-success.alert-dismissible');
     }
+
+    getProductPrices() {
+        return cy.get('tr td:nth-child(4) strong');
+    }
+
+    getTotalPrice() {
+        return cy.get('tr td:nth-child(5) strong');
+    }
 }
 
 export default ProductPage;
