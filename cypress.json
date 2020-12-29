@@ -1,6 +1,8 @@
 {
-    "env": {
-        "baseURL": "https://rahulshettyacademy.com",
-        "angularPracticeSite": "/angularpractice/"
-    }
+  "env": {
+    "baseURL": "https://rahulshettyacademy.com",
+    "angularPracticeSite": "/angularpractice/"
+  },
+  "projectId": "wud9ox",
+  "reporter": "mochawesome"
 }

@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run",
+    "headedTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "mochaTest": "npm run test -- --reporter mochawesome",
+    "orderSpecs": "npm run test -- --spec \"cypress/integration/examples/food_orders/*\"",
+    "customCommandSpec": "npm run test -- --spec \"cypress/integration/examples/custom-commands.spec.js\"" 
   },
   "author": "Dylan Kuster",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.1.0",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1"
   }
 }
