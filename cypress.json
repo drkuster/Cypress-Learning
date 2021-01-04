@@ -4,5 +4,6 @@
     "angularPracticeSite": "/angularpractice/"
   },
   "projectId": "wud9ox",
-  "reporter": "mochawesome"
+  "reporter": "mochawesome",
+  "testFiles": "**/*.spec.js"
 }

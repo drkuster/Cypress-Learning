@@ -1,0 +1,130 @@
+[
+  {
+    "description": "    I will automate the checkout process within Rahul's site and verify the site handles this scenario properly",
+    "keyword": "Feature",
+    "name": "Testing a sample checkout from Rahul Shetty's practice eCommerce site",
+    "line": 1,
+    "id": "testing-a-sample-checkout-from-rahul-shetty's-practice-ecommerce-site",
+    "tags": [],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "testing-a-sample-checkout-from-rahul-shetty's-practice-ecommerce-site;checking-out-with-max-items",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Checking out with max items",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I land on the site",
+            "result": {
+              "status": "passed",
+              "duration": 4292000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I place items in my cart",
+            "result": {
+              "status": "passed",
+              "duration": 692000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Verify the total price",
+            "result": {
+              "status": "passed",
+              "duration": 181000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Select the country, submit my order and verify its success",
+            "result": {
+              "status": "passed",
+              "duration": 18249000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "testing-a-sample-checkout-from-rahul-shetty's-practice-ecommerce-site;filling-out-the-form",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Filling out the form",
+        "tags": [
+          {
+            "name": "@Smoke",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I land on the form page",
+            "result": {
+              "status": "passed",
+              "duration": 6581000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "gender"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "bob",
+                      "Male"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I fill out the form details",
+            "result": {
+              "status": "passed",
+              "duration": 3685000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "Verify all information is correct",
+            "result": {
+              "status": "passed",
+              "duration": 72000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

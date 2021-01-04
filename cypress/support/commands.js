@@ -15,6 +15,10 @@
 
 import ProductPage from "./pages/product-page"
 
+Cypress.Commands.add("goToForm", () => {
+    cy.visit('https://rahulshettyacademy.com/angularpractice/')
+})
+
 Cypress.Commands.add("goToShop", () => {
     const productPage = new ProductPage()
     cy.visit(Cypress.env("baseURL") + Cypress.env("angularPracticeSite"))

@@ -9,12 +9,23 @@
     "chromeTest": "npm run test -- --browser chrome",
     "mochaTest": "npm run test -- --reporter mochawesome",
     "orderSpecs": "npm run test -- --spec \"cypress/integration/examples/food_orders/*\"",
-    "customCommandSpec": "npm run test -- --spec \"cypress/integration/examples/custom-commands.spec.js\"" 
+    "customCommandSpec": "npm run test -- --spec \"cypress/integration/examples/custom-commands.spec.js\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "author": "Dylan Kuster",
   "license": "ISC",
   "devDependencies": {
+    "cucumber-html-reporter": "^5.3.0",
     "cypress": "^6.1.0",
+    "cypress-cucumber-preprocessor": "^2.5.5",
     "cypress-iframe": "^1.0.1",
     "mocha": "^8.2.1",
     "mochawesome": "^6.2.1"

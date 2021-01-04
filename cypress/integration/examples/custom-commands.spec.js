@@ -12,7 +12,7 @@ describe('Utilizing a custom command', () => {
         cy.goToShop()
         globalThis.products.products.forEach(product => {
             cy.addProductToCart(product)
-        });
+        })
         globalThis.productPage.getCart().click()
     })
     it('Verify cart is correct', () => {
